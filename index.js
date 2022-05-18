@@ -35,6 +35,9 @@ app.use('/api/comment', commentRoute)
 app.use('/api/all_posts', allPostsRoute);
 
 connection();
+app.get('/', (req, res)=>{
+    res.send("Assignment by Tushar Bharti.")
+})
 app.listen(process.env.PORT || 5000, () => {
     console.log('The server is running successfully!');
 })
